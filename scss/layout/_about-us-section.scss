@@ -1,0 +1,53 @@
+.aboutUs-section {
+  background-size: cover;
+  margin-bottom: 128px;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+  }
+
+  &__content {
+    width: 100%;
+    max-width: 709px;
+    padding-top: 40px;
+  }
+
+  &__content,
+  &__images {
+    flex-grow: 1;
+  }
+
+  &__title-section {
+    margin-bottom: 40px;
+    max-width: 510px;
+  }
+
+  &__text {
+    margin-bottom: 40px;
+    line-height: 1.7;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__circle-block {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 327px;
+    height: 327px;
+    box-shadow: 0 4px 4px 0 rgba(168, 198, 245, 0.28);
+  }
+
+  .circle-bottom {
+    margin-left: 172px;
+  }
+}

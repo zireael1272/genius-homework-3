@@ -1,0 +1,46 @@
+.header {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    gap: 40px;
+    padding: 32px 0;
+  }
+
+  &__nav {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    gap: 40px;
+  }
+
+  &__nav-contact {
+    display: flex;
+  }
+
+  &__menu {
+    display: flex;
+    gap: 56px;
+    flex-grow: 1;
+    justify-content: center;
+  }
+
+  @media screen and (max-width: 1200px) {
+    display: none;
+  }
+
+  &__contact {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    align-items: center;
+    fill: var(--color-brand-dark);
+  }
+}

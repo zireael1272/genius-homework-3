@@ -1,0 +1,30 @@
+.section {
+  padding: 48px 0;
+}
+
+.title-section {
+  font-size: 64px;
+  line-height: 100%;
+  margin-bottom: 48px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1288px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.logo-icon {
+  fill: var(--color-brand);
+}
+
+.control-container {
+  width: 281px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}

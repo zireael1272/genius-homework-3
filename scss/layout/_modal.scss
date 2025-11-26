@@ -1,0 +1,95 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(1, 31, 74, 0.4);
+  padding: 20px 0;
+  transition:
+    opacity 0.3s,
+    visibility 0.3s;
+
+  &.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+
+.modal {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 720px;
+  max-height: 688px;
+  background: url(../images/modal_background.png) no-repeat;
+  background-color: var(--color-brand-dark);
+  background-size: cover;
+  background-position: center;
+  border-radius: 48px;
+  padding: 42px 144px;
+  overflow: auto;
+
+  &__title-modal {
+    color: var(--white);
+    margin: 0;
+    font-family: "Play", sans-serif;
+    font-weight: 700;
+    font-size: 64px;
+    width: 435px;
+    line-height: 100%;
+  }
+
+  &__form-field {
+    margin-bottom: 24px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 40px;
+  }
+
+  &__form {
+    width: 310px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+  }
+
+  &__input-container {
+    width: 310px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__text-form {
+    color: var(--white);
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 100%;
+  }
+}
+
+.modal-btn-close {
+  position: absolute;
+  background-color: transparent;
+  top: 42px;
+  right: 42px;
+  cursor: pointer;
+  fill: var(--white);
+  border: 0;
+  width: 16px;
+  height: 16px;
+}
