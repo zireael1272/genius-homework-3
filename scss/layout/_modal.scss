@@ -8,7 +8,7 @@
   align-items: center;
   justify-content: center;
   background-color: rgba(1, 31, 74, 0.4);
-  padding: 20px 0;
+  padding: 20px;
   transition:
     opacity 0.3s,
     visibility 0.3s;
@@ -31,8 +31,12 @@
   background-size: cover;
   background-position: center;
   border-radius: 48px;
-  padding: 42px 144px;
+  padding: 36px 122px;
   overflow: auto;
+
+  @media screen and (min-width: $bp-desktop) {
+    padding: 42px 144px;
+  }
 
   &__title-modal {
     color: var(--white);
@@ -85,11 +89,34 @@
 .modal-btn-close {
   position: absolute;
   background-color: transparent;
-  top: 42px;
+  top: 32px;
   right: 42px;
   cursor: pointer;
   fill: var(--white);
   border: 0;
   width: 16px;
   height: 16px;
+
+  @media screen and (min-width: $bp-desktop) {
+    top: 42px;
+    right: 42px;
+    fill: var(--white);
+  }
+}
+
+.modal::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0);
+  border-radius: 10px;
+}
+
+.modal::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+}
+
+.modal::-webkit-scrollbar-thumb:hover {
+  background-color: var(--white);
 }

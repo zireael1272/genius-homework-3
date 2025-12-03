@@ -48,3 +48,17 @@
     text-underline-offset: 2px;
   }
 }
+
+/* Стиль для поля з помилкою */
+.input__control.error {
+  border-color: #ff0000;
+  box-shadow: 0 0 5px rgba(255, 0, 0, 0.3);
+}
+
+/* Стиль для тексту помилки */
+.error-message {
+  color: #ff0000;
+  font-size: 12px;
+  margin-top: 4px;
+  display: block;
+}

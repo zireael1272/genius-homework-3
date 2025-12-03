@@ -1,5 +1,4 @@
 .hero-section {
-  height: 658px;
   background:
     linear-gradient(
       89.38deg,
@@ -9,34 +8,93 @@
       rgba(255, 255, 255, 0) 72.78%
     ),
     url(../images/hero-background.png) no-repeat;
-  background-position: center top;
-  padding: 126px 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 0 20px;
+  padding-top: 71px;
+  background-size: 160%;
 
-  &__content {
-    width: 100%;
-    max-width: 529px;
-    margin-left: 120px;
+  @media screen and (min-width: $bp-tablet) {
+    padding-top: 126px;
+    padding-bottom: 90px;
+    background-size: 100%;
+    background-position: top center;
   }
 
-  &__hero-subtitle {
-    font-size: 18px;
-    margin-bottom: 16px;
+  @media screen and (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background:
+      linear-gradient(
+        89.38deg,
+        var(--white) 30.62%,
+        rgba(255, 255, 255, 0.850898) 41.31%,
+        rgba(255, 255, 255, 0.193204) 58.65%,
+        rgba(255, 255, 255, 0) 72.78%
+      ),
+      url(/images/hero-background@2x.png);
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (min-width: $bp-tablet) {
+      padding-left: 182px;
+      text-align: start;
+      justify-content: start;
+      align-items: start;
+    }
+  }
+
+  &__subtitle {
+    font-size: 12px;
+    margin-bottom: 0;
+
+    @media screen and (min-width: $bp-tablet) {
+      font-size: 18px;
+      margin-bottom: 16px;
+    }
   }
 
   &__title {
-    font-size: 140px;
+    font-size: 54px;
+    max-width: 529px;
+    line-height: 0.8;
     font-weight: 700;
     text-transform: capitalize;
-    line-height: 0.8;
-    margin-bottom: 40px;
+    margin-bottom: 32px;
+
+    @media screen and (min-width: $bp-tablet) {
+      font-size: 140px;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__control {
+    display: flex;
+    flex-direction: column;
+    @media screen and (min-width: $bp-tablet) {
+    }
   }
 
   &__description {
-    font-size: 12px;
-    line-height: 1.5;
+    font-size: 11px;
+    line-height: 1.6;
     margin-bottom: 0;
-    max-width: 238px;
     text-align: center;
+    max-width: 186px;
     color: var(--description-grey);
+
+    @media screen and (min-width: $bp-tablet) {
+      font-size: 12px;
+      line-height: 1.5;
+      max-width: 238px;
+    }
   }
 }

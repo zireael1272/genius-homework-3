@@ -2,9 +2,12 @@
 @import "./utils/variables";
 @import "./utils/utils";
 @import "./utils/texts";
-@import "./base";
+
 @import "./components/buttons";
 @import "./components/links";
+@import "./components/pagination";
+@import "./components/procedure-card";
+
 @import "./layout/header";
 @import "./layout/footer";
 @import "./layout/modal";
@@ -14,4 +17,6 @@
 @import "./layout/why-we-section";
 @import "./layout/our-procedure-section";
 @import "./layout/contact-section";
+@import "./layout/mobile_menu";
 @import "./general";
+@import "./base";

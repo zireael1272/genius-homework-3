@@ -1,17 +1,25 @@
 .header {
   position: absolute;
-  background: rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(10px);
   top: 0;
   left: 0;
   width: 100%;
+  padding: 16px 18px;
+
+  @media screen and (min-width: $bp-tablet) {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    padding: 32px 0;
+  }
 
   &__container {
     display: flex;
-    align-items: center;
-    font-size: 18px;
+    align-items: start;
     gap: 40px;
-    padding: 32px 0;
+
+    @media screen and (min-width: $bp-tablet) {
+      font-size: 18px;
+      gap: 40px;
+    }
   }
 
   &__nav {
@@ -23,24 +31,45 @@
 
   &__nav-contact {
     display: flex;
+
+    @media screen and (min-width: $bp-desktop) {
+      right: -18px;
+    }
   }
 
   &__menu {
-    display: flex;
-    gap: 56px;
-    flex-grow: 1;
-    justify-content: center;
-  }
-
-  @media screen and (max-width: 1200px) {
     display: none;
+
+    @media screen and (min-width: $bp-desktop) {
+      display: flex;
+      gap: 56px;
+      flex-grow: 1;
+      justify-content: center;
+    }
   }
 
   &__contact {
-    display: flex;
-    gap: 32px;
-    justify-content: center;
-    align-items: center;
-    fill: var(--color-brand-dark);
+    display: none;
+
+    @media screen and (min-width: $bp-desktop) {
+      display: flex;
+      gap: 32px;
+      justify-content: center;
+      align-items: center;
+      fill: var(--color-brand-dark);
+    }
+  }
+
+  &__burger {
+    fill: var(--white);
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+
+    @media screen and (min-width: $bp-desktop) {
+      display: none;
+    }
   }
 }

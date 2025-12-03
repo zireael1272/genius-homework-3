@@ -1,0 +1,39 @@
+.procedure-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 344px;
+  height: 456px;
+  border-radius: 4px 120px;
+  overflow: hidden;
+
+  background-image: linear-gradient(
+    180.05deg,
+    rgba(1, 28, 68, 0) 48.53%,
+    rgba(1, 28, 68, 0.725825) 84.61%,
+    var(--color-brand-dark) 101.39%
+  );
+
+  &:hover .text-card {
+    opacity: 1;
+  }
+}
+
+.text-card {
+  color: var(--white);
+  line-height: 1.18;
+  width: 152px;
+  margin-left: 115px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.procedure-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}

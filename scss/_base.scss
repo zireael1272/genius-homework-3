@@ -8,9 +8,21 @@ body {
   color: var(--color-brand-dark);
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  font-size: 22px;
-  line-height: 1.7;
+  font-size: 18px;
+  line-height: 100%;
   margin: 0;
+  background: url(/images/main_background.png) no-repeat;
+  background-position: center 500px;
+
+  @media screen and (min-width: $bp-tablet) {
+    font-size: 22px;
+    line-height: 1.7;
+    background-position: center 1400px;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 h3 {
@@ -35,4 +47,24 @@ p {
 
 a {
   display: inline-block;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+address {
+  font-style: normal;
+}
+
+a,
+button,
+input,
+textarea,
+select,
+svg {
+  transition: all 0.2s ease;
 }
